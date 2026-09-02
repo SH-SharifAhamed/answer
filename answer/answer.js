@@ -35,4 +35,19 @@ function validateUsername(username) {
      if (u.toLowerCase().includes('admin')) return "Reserved Word";
      return "Available";
 }
-console.log(validateUsername("sharif"));
+// console.log(validateUsername("sharif"));
+
+
+// Problem-4
+function getCngFare(distance, isNight = false, waitingMinutes = 0) {
+     let fare = 50;
+     if (distance > 2) {
+          fare += (distance - 2) * 15;
+     }
+     fare += waitingMinutes * 2;
+     if (isNight) {
+          fare = fare * 1.2;
+     }
+     return fare;
+}
+console.log(getCngFare(2));
