@@ -25,3 +25,14 @@ function getDayType(day) {
      }
 }
 // console.log(getDayType("friday"));
+
+
+// Problem-3
+function validateUsername(username) {
+     const u = String(username);
+     if (u.length < 4) return "Too Short";
+     if (u.includes(' ')) return "No Space Allowed";
+     if (u.toLowerCase().includes('admin')) return "Reserved Word";
+     return "Available";
+}
+console.log(validateUsername("sharif"));
